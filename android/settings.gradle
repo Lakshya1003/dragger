@@ -1,0 +1,43 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+def flutterSdkPath = {
+    def properties = new Properties()
+    def propertiesFile = new File(rootProject.projectDir, "local.properties")
+    if (propertiesFile.exists()) {
+        propertiesFile.withReader("UTF-8") { reader -> properties.load(reader) }
+    }
+    def flutterSdkPath = properties.getProperty("flutter.sdk")
+    assert flutterSdkPath != null, "flutter.sdk not set in local.properties"
+    return flutterSdkPath
+}()
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+include ':app'
+
+rootProject.name = 'android'
+
+apply from: "${flutterSdkPath}/packages/flutter_tools/gradle/app_plugin_loader.gradle"
+
+// This is required to provide compatibility with AGP 7.3.0
+gradle.projectsEvaluated {
+    rootProject.subprojects {
+        if (project.hasProperty("android")) {
+            android {
+                namespace project.getName()
+            }
+        }
+    }
+}

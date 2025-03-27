@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "577155010875",
+    "project_id": "athlete-s",
+    "storage_bucket": "athlete-s.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577155010875:android:cbf8c89117d23269ce271e",
+        "android_client_info": {
+          "package_name": "com.example.athi_pro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlOFYCUtFzQOYVBGa2Zs6Dw6fUYtE9GzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577155010875:android:daba30f9d4605201ce271e",
+        "android_client_info": {
+          "package_name": "com.example.athlead"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlOFYCUtFzQOYVBGa2Zs6Dw6fUYtE9GzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
